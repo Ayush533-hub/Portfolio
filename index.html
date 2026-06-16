@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush Mandal | MERN Stack Developer Portfolio</title>
+  <meta name="description" content="Professional portfolio of Ayush Mandal, MERN Stack Developer. Exploring full-stack engineering, web applications, and space educational technologies.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome (for Brand Icons) & Lucide Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Background 3D Scroll Canvas -->
+  <canvas id="canvas-3d"></canvas>
+  
+  <!-- Ambient Background Nebulas -->
+  <div class="nebula nebula-pink"></div>
+  <div class="nebula nebula-purple"></div>
+  <div class="nebula nebula-blue"></div>
+
+
+
+  <!-- Main Content Wrapper -->
+  <div class="scroll-container">
+    
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="logo">
+          <span class="logo-accent">&lt;</span>Ayush<span class="logo-accent"> /&gt;</span>
+        </a>
+        <nav class="nav-menu">
+          <a href="#hero" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="mailto:ayushmandal533@gmail.com" class="btn btn-secondary nav-btn">Let's Talk</a>
+        </div>
+        <button class="mobile-menu-toggle" id="menu-toggle">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav">
+      <div class="mobile-nav-menu">
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="mailto:ayushmandal533@gmail.com" class="btn btn-primary mobile-cta">Email Me</a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section hero-section">
+      <div class="hero-content">
+        <div class="badge-container">
+          <span class="glow-badge"><span class="badge-dot"></span> Available for Opportunities</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="greeting">Hi, I'm</span>
+          <span class="name-gradient">Ayush Mandal</span>
+        </h1>
+        <h2 class="hero-subtitle">MERN Stack Developer</h2>
+        <p class="hero-desc">
+          Building high-performance web applications, interactive interfaces, and scalable database architectures. Crafting clean code with the MongoDB, Express, React, and Node.js stack.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            Explore Work <i data-lucide="arrow-down" class="btn-icon"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            Get in Touch <i data-lucide="mail" class="btn-icon"></i>
+          </a>
+        </div>
+        
+        <div class="hero-socials">
+          <a href="https://github.com/Ayush533-hub" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/ayush-mandal-282013287" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:ayushmandal533@gmail.com" class="social-link" title="Email">
+            <i data-lucide="mail"></i>
+          </a>
+          <a href="tel:6264289141" class="social-link" title="Phone">
+            <i data-lucide="phone"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <span class="mouse-icon">
+          <span class="wheel"></span>
+        </span>
+        <span class="scroll-text">Scroll to Discover</span>
+      </div>
+    </section>
+
+    <!-- About & Skills Section -->
+    <section id="about" class="section about-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">01 // Expertise</span>
+          <h2 class="section-title">Technical Arsenal</h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-text-card glass-card">
+            <h3 class="card-title-glow">Who I Am</h3>
+            <p>
+              I am a passionate MERN Stack Developer who thrives at the intersection of coding and design. I design and implement responsive, feature-rich web applications that bridge elegant client-side user interfaces with robust server-side APIs.
+            </p>
+            <p>
+              My philosophy centers around clean software architecture, component-driven development, and creating interfaces that deliver memorable user experiences.
+            </p>
+            <div class="quick-info-list">
+              <div class="info-item">
+                <i data-lucide="map-pin" class="info-icon"></i>
+                <span>India</span>
+              </div>
+              <div class="info-item">
+                <i data-lucide="code" class="info-icon"></i>
+                <span>MERN Developer</span>
+              </div>
+              <div class="info-item">
+                <i data-lucide="mail" class="info-icon"></i>
+                <span>ayushmandal533@gmail.com</span>
+              </div>
+              <div class="info-item">
+                <i data-lucide="phone" class="info-icon"></i>
+                <span>+91 6264289141</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skills-showcase">
+            <div class="skills-grid">
+              
+              <!-- MongoDB Card -->
+              <div class="skill-card glass-card tilt-target" data-glow-color="#47a248">
+                <div class="skill-icon-wrap">
+                  <i class="fa-solid fa-database skill-icon mongo"></i>
+                </div>
+                <h4 class="skill-name">MongoDB</h4>
+                <p class="skill-desc">NoSQL databases, indexing, aggregation pipelines</p>
+              </div>
+
+              <!-- Express Card -->
+              <div class="skill-card glass-card tilt-target" data-glow-color="#f7df1e">
+                <div class="skill-icon-wrap">
+                  <span class="skill-icon-text">EX</span>
+                </div>
+                <h4 class="skill-name">Express.js</h4>
+                <p class="skill-desc">RESTful APIs, routing, server middleware</p>
+              </div>
+
+              <!-- React Card -->
+              <div class="skill-card glass-card tilt-target" data-glow-color="#61dafb">
+                <div class="skill-icon-wrap">
+                  <i class="fa-brands fa-react skill-icon react animate-spin-slow"></i>
+                </div>
+                <h4 class="skill-name">React.js</h4>
+                <p class="skill-desc">Component architecture, hooks, state management</p>
+              </div>
+
+              <!-- Node Card -->
+              <div class="skill-card glass-card tilt-target" data-glow-color="#339933">
+                <div class="skill-icon-wrap">
+                  <i class="fa-brands fa-node-js skill-icon node"></i>
+                </div>
+                <h4 class="skill-name">Node.js</h4>
+                <p class="skill-desc">Backend services, package ecosystems, event loops</p>
+              </div>
+
+              <!-- Javascript Card -->
+              <div class="skill-card glass-card tilt-target" data-glow-color="#f7df1e">
+                <div class="skill-icon-wrap">
+                  <i class="fa-brands fa-js skill-icon js"></i>
+                </div>
+                <h4 class="skill-name">JavaScript</h4>
+                <p class="skill-desc">ES6+, async await, DOM APIs, Canvas API</p>
+              </div>
+
+              <!-- Developer Tools Card -->
+              <div class="skill-card glass-card tilt-target" data-glow-color="#00f2fe">
+                <div class="skill-icon-wrap">
+                  <i class="fa-solid fa-sliders skill-icon tools"></i>
+                </div>
+                <h4 class="skill-name">DevTools</h4>
+                <p class="skill-desc">Git/GitHub, REST client, Tailwind CSS, Vite</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">02 // Selected Projects</span>
+          <h2 class="section-title">Core Achievements</h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="projects-layout">
+          
+          <!-- Project 1: Nebula Nexus -->
+          <div class="project-container glass-card tilt-target" data-tilt-intensity="10">
+            <div class="project-content-grid">
+              <div class="project-info">
+                <div class="project-header">
+                  <span class="project-category"><i data-lucide="orbit" class="project-cat-icon"></i> Space Science EdTech</span>
+                  <h3 class="project-title">Nebula Nexus</h3>
+                </div>
+                
+                <p class="project-description">
+                  A high-end space-focused educational platform that empowers students with learning resources in astronomy, space science, and space research. Offers structured courses, exam preparation materials, research documentation, mock tests, and a collaborative learning community, helping learners build careers in space and scientific innovation.
+                </p>
+                
+                <div class="project-features">
+                  <span class="feature-item"><span class="feature-dot"></span> Live Classes & Courses</span>
+                  <span class="feature-item"><span class="feature-dot"></span> Mock Tests & Prep</span>
+                  <span class="feature-item"><span class="feature-dot"></span> Research Documentation</span>
+                  <span class="feature-item"><span class="feature-dot"></span> Collaborative Community</span>
+                </div>
+                
+                <div class="project-tags">
+                  <span class="tag">React.js</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">Express.js</span>
+                  <span class="tag">MongoDB</span>
+                  <span class="tag">WebSockets</span>
+                  <span class="tag">CSS Grid</span>
+                </div>
+                
+                <div class="project-links">
+                  <a href="https://github.com/Ayush533-hub" target="_blank" rel="noopener noreferrer" class="btn btn-secondary project-btn">
+                    View Repository <i data-lucide="github" class="btn-icon"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="project-visual">
+                <div class="nebula-visual-effect">
+                  <!-- Custom interactive space-like visual box -->
+                  <div class="space-circle-container">
+                    <div class="orbit-circle orbit-1"></div>
+                    <div class="orbit-circle orbit-2"></div>
+                    <div class="orbit-circle orbit-3"></div>
+                    <div class="planet-core"></div>
+                    <div class="floating-satellite"></div>
+                  </div>
+                  <div class="nebula-text-glow">NEBULA NEXUS</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 2: CampusX -->
+          <div class="project-container glass-card tilt-target" data-tilt-intensity="10">
+            <div class="project-content-grid project-reverse">
+              <div class="project-info">
+                <div class="project-header">
+                  <span class="project-category"><i data-lucide="layers" class="project-cat-icon"></i> Club Operating System</span>
+                  <h3 class="project-title">CampusX</h3>
+                </div>
+                
+                <p class="project-description">
+                  An all-in-one Club OS allowing multiple college clubs to operate on a unified platform. It guides students through specialized community chatrooms, integrates AI assistance, organizes campus events, and secures data pathways using a layered admin panel structure.
+                </p>
+                
+                <div class="project-features">
+                  <span class="feature-item"><span class="feature-dot"></span> Multi-Club Management</span>
+                  <span class="feature-item"><span class="feature-dot"></span> Chatrooms & AI Assist</span>
+                  <span class="feature-item"><span class="feature-dot"></span> Event Organizer Desk</span>
+                  <span class="feature-item"><span class="feature-dot"></span> Layered Admin Panel</span>
+                </div>
+                
+                <div class="project-tags">
+                  <span class="tag">MERN Stack</span>
+                  <span class="tag">AI Integration</span>
+                  <span class="tag">Socket.io</span>
+                  <span class="tag">Admin Panel</span>
+                  <span class="tag">CSS variables</span>
+                </div>
+                
+                <div class="project-links">
+                  <a href="https://github.com/Ayush533-hub" target="_blank" rel="noopener noreferrer" class="btn btn-secondary project-btn">
+                    View Repository <i data-lucide="github" class="btn-icon"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="project-visual">
+                <div class="campus-visual-effect">
+                  <!-- Custom terminal / dashboard mockup -->
+                  <div class="terminal-mockup">
+                    <div class="terminal-header">
+                      <span class="term-dot dot-red"></span>
+                      <span class="term-dot dot-yellow"></span>
+                      <span class="term-dot dot-green"></span>
+                      <span class="term-title">CampusX Club OS v1.0.4</span>
+                    </div>
+                    <div class="terminal-body">
+                      <p class="term-line"><span class="term-prompt">admin@campusx:~$</span> initialize-club-system</p>
+                      <p class="term-line term-success">[SUCCESS] Loaded 12 active club modules</p>
+                      <p class="term-line"><span class="term-prompt">admin@campusx:~$</span> start-ai-assistant --model=gpt-agent</p>
+                      <p class="term-line term-info">[INFO] AI chatrooms initialized for STEM and Arts</p>
+                      <p class="term-line"><span class="term-prompt">admin@campusx:~$</span> run events-calendar --month=june</p>
+                      <p class="term-line term-warning">[WARN] Layered Admin access: Level-3 verified</p>
+                      <div class="terminal-cursor-line">
+                        <span class="term-prompt">admin@campusx:~$</span><span class="terminal-cursor"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">03 // Communication Channel</span>
+          <h2 class="section-title">Let's Connect</h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="contact-grid">
+          <div class="contact-info-block glass-card">
+            <h3 class="card-title-glow">Reach Out</h3>
+            <p>
+              I am open to discussions about full-time roles, contract work, or collaborations on innovative projects. Feel free to reach out via call, email, or connect on professional networks!
+            </p>
+            
+            <div class="contact-channels">
+              <a href="tel:6264289141" class="channel-card glass-card">
+                <div class="channel-icon">
+                  <i data-lucide="phone"></i>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">Mobile Call</span>
+                  <span class="channel-value">+91 6264289141</span>
+                </div>
+              </a>
+
+              <a href="mailto:ayushmandal533@gmail.com" class="channel-card glass-card">
+                <div class="channel-icon">
+                  <i data-lucide="mail"></i>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">Email Address</span>
+                  <span class="channel-value">ayushmandal533@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/ayush-mandal-282013287" target="_blank" rel="noopener noreferrer" class="channel-card glass-card">
+                <div class="channel-icon">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">LinkedIn</span>
+                  <span class="channel-value">ayush-mandal-282013287</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/Ayush533-hub" target="_blank" rel="noopener noreferrer" class="channel-card glass-card">
+                <div class="channel-icon">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">GitHub Account</span>
+                  <span class="channel-value">Ayush533-hub</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+          <div class="contact-form-card glass-card">
+            <h3 class="card-title-glow">Direct Message</h3>
+            <form id="contact-form" class="contact-form" onsubmit="event.preventDefault(); alert('Message feature placeholder: In actual production, this connects to your MERN email API!');">
+              <div class="form-group">
+                <label for="form-name">Your Name</label>
+                <input type="text" id="form-name" required placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="form-email">Your Email</label>
+                <input type="email" id="form-email" required placeholder="john@example.com">
+              </div>
+              <div class="form-group">
+                <label for="form-message">Message</label>
+                <textarea id="form-message" rows="5" required placeholder="Write your message here..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                Send Message <i data-lucide="send" class="btn-icon"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <p class="footer-copy">&copy; 2026 Ayush Mandal. Built with cosmic logic.</p>
+        <div class="footer-logo">
+          <span class="logo-accent">&lt;</span>Ayush<span class="logo-accent"> /&gt;</span>
+        </div>
+        <p class="footer-tagline">MERN Stack Developer & Innovator</p>
+      </div>
+    </footer>
+    
+  </div>
+
+  <!-- App Script -->
+  <script src="./main.js" type="module"></script>
+</body>
+</html>
