@@ -403,22 +403,27 @@
           
           <div class="contact-form-card glass-card">
             <h3 class="card-title-glow">Direct Message</h3>
-            <form id="contact-form" class="contact-form" onsubmit="event.preventDefault(); alert('Message feature placeholder: In actual production, this connects to your MERN email API!');">
+            <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              <!-- Please replace YOUR_ACCESS_KEY_HERE with your Web3Forms access key from https://web3forms.com/ -->
+              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+              <input type="hidden" name="subject" value="New message from your Portfolio">
+              
               <div class="form-group">
                 <label for="form-name">Your Name</label>
-                <input type="text" id="form-name" required placeholder="John Doe">
+                <input type="text" id="form-name" name="name" required placeholder="John Doe">
               </div>
               <div class="form-group">
                 <label for="form-email">Your Email</label>
-                <input type="email" id="form-email" required placeholder="john@example.com">
+                <input type="email" id="form-email" name="email" required placeholder="john@example.com">
               </div>
               <div class="form-group">
                 <label for="form-message">Message</label>
-                <textarea id="form-message" rows="5" required placeholder="Write your message here..."></textarea>
+                <textarea id="form-message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-full">
                 Send Message <i data-lucide="send" class="btn-icon"></i>
               </button>
+              <p id="form-status" class="form-status" style="display: none; margin-top: 15px; font-size: 0.9rem; text-align: center;"></p>
             </form>
           </div>
         </div>

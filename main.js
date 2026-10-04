@@ -335,3 +335,63 @@ function init3DStarfield() {
   
   draw();
 }
+
+// Contact Form Handling (Web3Forms API)
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
+  const result = document.getElementById('form-status');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Validation for placeholder key
+      const accessKey = form.querySelector('[name="access_key"]').value;
+      if (accessKey === 'YOUR_ACCESS_KEY_HERE') {
+        result.style.display = 'block';
+        result.style.color = '#ff4d4d';
+        result.innerHTML = 'Developer Notice: You need to set your Web3Forms Access Key in index.html to send emails.';
+        return;
+      }
+      
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      
+      result.style.display = 'block';
+      result.style.color = '#a6b0cf'; // loading text
+      result.innerHTML = 'Sending message...';
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
+      .then(async (response) => {
+        let jsonRes = await response.json();
+        if (response.status == 200) {
+          result.style.color = '#4ade80'; // success green
+          result.innerHTML = 'Email sent successfully! I will get back to you soon.';
+          form.reset();
+        } else {
+          console.log(response);
+          result.style.color = '#ff4d4d'; // error red
+          result.innerHTML = jsonRes.message || 'Something went wrong!';
+        }
+      })
+      .catch(error => {
+        console.log(error);
+        result.style.color = '#ff4d4d';
+        result.innerHTML = 'Something went wrong! Please try again later.';
+      })
+      .then(function() {
+        setTimeout(() => {
+          result.style.display = 'none';
+        }, 5000);
+      });
+    });
+  }
+});
