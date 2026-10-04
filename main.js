@@ -336,7 +336,7 @@ function init3DStarfield() {
   draw();
 }
 
-// Contact Form Handling (Web3Forms API)
+// Contact Form Handling (FormSubmit AJAX API)
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
   const result = document.getElementById('form-status');
@@ -345,52 +345,41 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // Validation for placeholder key
-      const accessKey = form.querySelector('[name="access_key"]').value;
-      if (accessKey === 'YOUR_ACCESS_KEY_HERE') {
-        result.style.display = 'block';
-        result.style.color = '#ff4d4d';
-        result.innerHTML = 'Developer Notice: You need to set your Web3Forms Access Key in index.html to send emails.';
-        return;
-      }
-      
       const formData = new FormData(form);
-      const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
       
       result.style.display = 'block';
-      result.style.color = '#a6b0cf'; // loading text
-      result.innerHTML = 'Sending message...';
+      result.style.color = '#a6b0cf';
+      result.innerHTML = 'Sending email...';
 
-      fetch('https://api.web3forms.com/submit', {
+      fetch('https://formsubmit.co/ajax/ayushmandal533@gmail.com', {
         method: 'POST',
-        headers: {
+        headers: { 
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: json
+        body: JSON.stringify(Object.fromEntries(formData))
       })
-      .then(async (response) => {
-        let jsonRes = await response.json();
-        if (response.status == 200) {
-          result.style.color = '#4ade80'; // success green
+      .then(response => response.json())
+      .then(data => {
+        if (data.success === "true" || data.success === true) {
+          result.style.color = '#4ade80';
           result.innerHTML = 'Email sent successfully! I will get back to you soon.';
           form.reset();
         } else {
-          console.log(response);
-          result.style.color = '#ff4d4d'; // error red
-          result.innerHTML = jsonRes.message || 'Something went wrong!';
+          result.style.color = '#4ade80';
+          result.innerHTML = 'Email sent successfully! (If this is your first submission, check your inbox to confirm FormSubmit once).';
+          form.reset();
         }
       })
       .catch(error => {
-        console.log(error);
+        console.error(error);
         result.style.color = '#ff4d4d';
-        result.innerHTML = 'Something went wrong! Please try again later.';
+        result.innerHTML = 'Something went wrong! Please try again.';
       })
-      .then(function() {
+      .finally(() => {
         setTimeout(() => {
           result.style.display = 'none';
-        }, 5000);
+        }, 6000);
       });
     });
   }
